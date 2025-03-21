@@ -1,0 +1,16 @@
+name: "Hello world workflow"
+
+# this is a comment
+
+on:
+  push:
+    branches:
+      - master
+      - production
+
+jobs:
+  hello_world: # user defined name
+    runs-on: ubuntu_latest # predefined name
+    steps:
+      - name: Print hello world
+        run: echo hello world
