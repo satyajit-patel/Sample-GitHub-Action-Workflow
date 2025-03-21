@@ -1,6 +1,7 @@
 name: "Hello world workflow"
 
 # This is a comment
+# steps => jobs => workflows
 
 on:
   push:
@@ -12,5 +13,7 @@ jobs:
   hello_world: # User-defined name
     runs-on: ubuntu-latest # Corrected predefined name
     steps:
-      - name: Print hello world
+      - name: "Print hello world"
         run: echo "hello world"
+      - name: "print current date"
+        run: date
